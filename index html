@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wholesale Agency</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #000;
+      color: #fff;
+    }
+    form {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #000;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #444;
+    }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>Wholesale Agency</header>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:selezionexyzweb@gmail.com">selezionexyzweb@gmail.com</a></p>
+    <p>WhatsApp : <a href="https://wa.me/33783732190" target="_blank">+33 7 83 73 21 90</a></p>
+    <p>Instagram : <a href="https://www.instagram.com/agencywholesale?igsh=MXdnb3gzdmZpYmM0cw==" target="_blank">@agencywholesale</a></p>
+    <p>LinkedIn : <a href="https://www.linkedin.com/in/selezione-xyz-044855377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Profil LinkedIn</a></p>
+  </section>
+
+  <section>
+    <h2>Téléchargements</h2>
+    <p><a href="https://ton-hebergeur.com/catalogue.pdf" target="_blank">📂 Catalogue FW25</a></p>
+    <p><a href="https://ton-hebergeur.com/prix.pdf" target="_blank">📂 Liste de prix</a></p>
+    <p><a href="https://ton-hebergeur.com/lookbook.pdf" target="_blank">📂 Lookbook</a></p>
+  </section>
+
+  <section>
+    <h2>Demande d’accès</h2>
+    <form action="mailto:selezionexyzweb@gmail.com" method="POST" enctype="text/plain">
+      <label>Nom et Prénom</label>
+      <input type="text" name="nom" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Téléphone</label>
+      <input type="tel" name="telephone" required>
+
+      <label>Collection</label>
+      <select name="collection">
+        <option>FW25</option>
+        <option>SS25</option>
+        <option>Autre</option>
+      </select>
+
+      <label>Genre</label>
+      <select name="genre">
+        <option>Homme</option>
+        <option>Femme</option>
+        <option>Mixte</option>
+      </select>
+
+      <label>Marques</label>
+      <textarea name="marques" placeholder="Listez les marques recherchées"></textarea>
+
+      <label>Catégorie de produits</label>
+      <select name="categorie">
+        <option>Prêt-à-porter</option>
+        <option>Chaussures</option>
+        <option>Sacs & Accessoires</option>
+        <option>Mix</option>
+      </select>
+
+      <label>Budget</label>
+      <select name="budget">
+        <option>0 - 5K€</option>
+        <option>5K€ - 10K€</option>
+        <option>10K€ - 20K€</option>
+        <option>20K€ et +</option>
+      </select>
+
+      <button type="submit">Envoyer la demande</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Wholesale Agency — Tous droits réservés
+  </footer>
+</body>
+</html>
