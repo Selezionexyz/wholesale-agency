@@ -1,296 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wholesale Agency — Contact & Downloads</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesale Agency</title>
   <style>
-    :root{
-      --bg:#070607;
-      --panel:#0f0f0f;
-      --muted:#bfb6ac;
-      --accent:#e7dfd6;   /* warm ivory */
-      --gold:#c9a86b;
-      --glass: rgba(255,255,255,0.03);
-      --radius:16px;
-      --maxw:1100px;
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #fafafa;
+      color: #222;
+      margin: 0;
+      padding: 0;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background: linear-gradient(180deg,var(--bg),#060605 120%);
-      color:var(--accent);
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
+    header {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      padding: 2rem;
     }
-
-    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px;display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:start}
-    header.site{
-      grid-column:1 / -1;
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
-      margin-bottom:6px;
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 1px;
     }
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{
-      width:72px;height:72px;border-radius:12px;
-      background:linear-gradient(135deg,#101010,#070707);
-      display:flex;align-items:center;justify-content:center;font-weight:700;
-      font-family:"Playfair Display", serif;font-size:22px;color:var(--accent);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.7), inset 0 -6px 18px rgba(255,255,255,0.02);
+    header p {
+      font-size: 1.2rem;
+      color: #555;
     }
-    h1{font-family:"Playfair Display", serif;margin:0;font-size:20px;color:var(--accent)}
-    .tag{color:var(--muted);font-size:13px}
-
-    nav.toplinks a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
-    nav.toplinks a:hover{color:var(--accent)}
-
-    /* HERO / INTRO */
-    .hero {padding:28px;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
-    .hero h2{font-family:"Playfair Display",serif;font-size:36px;margin:0 0 10px;color:var(--accent);letter-spacing:0.4px}
-    .hero p{color:var(--muted);max-width:78%}
-    .cta{display:inline-block;margin-top:18px;padding:12px 20px;border-radius:12px;background:transparent;border:1px solid rgba(201,168,107,0.18);color:var(--gold);font-weight:600;text-decoration:none}
-
-    /* SIDE CARD */
-    .card{background:var(--panel);padding:20px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(0,0,0,0.7)}
-    .card h3{margin:0 0 12px;font-family:"Playfair Display",serif}
-    .downloads a{display:block;padding:10px 12px;margin-bottom:10px;border-radius:10px;background:var(--glass);color:var(--accent);text-decoration:none;border:1px solid rgba(255,255,255,0.03)}
-    .downloads a small{display:block;color:var(--muted);font-size:12px}
-
-    /* FORM */
-    .form-wrap{grid-column:1 / -1;margin-top:18px;display:grid;grid-template-columns:1fr 520px;gap:28px}
-    form{background:linear-gradient(180deg,#0c0c0c,#0a0a0a);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
-    label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
-    input[type="text"], input[type="email"], input[type="tel"], textarea, select {
-      width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--accent)
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
     }
-    textarea{min-height:110px;resize:vertical}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .full{grid-column:1 / -1}
-    .submit{display:inline-block;margin-top:12px;padding:12px 20px;border-radius:12px;background:var(--gold);color:#080707;font-weight:700;border:none;cursor:pointer}
-    .hint{color:var(--muted);font-size:13px;margin-top:10px}
-
-    /* footer */
-    footer{grid-column:1 / -1;margin-top:28px;color:var(--muted);font-size:13px;text-align:center;padding-bottom:40px}
-
-    /* responsive */
-    @media (max-width:980px){
-      .wrap{grid-template-columns:1fr; padding:18px}
-      .form-wrap{grid-template-columns:1fr; margin-top:14px}
-      .hero p{max-width:100%}
+    .catalogue-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #c5a572;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .catalogue-btn:hover {
+      background-color: #b89665;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #c5a572;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #b89665;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    .social-links a {
+      margin: 0 10px;
+      color: #c5a572;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="site">
-      <div class="brand">
-        <div class="logo">WA</div>
-        <div>
-          <h1>Wholesale Agency</h1>
-          <div class="tag">Sourcing confidentiel • Collections premium</div>
-        </div>
-      </div>
 
-      <nav class="toplinks" aria-label="Navigation">
-        <a href="#downloads">Téléchargements</a>
-        <a href="#form">Demande d'accès</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<header>
+  <h1>Wholesale Agency</h1>
+  <p>11 ans d’expérience avec les meilleurs fournisseurs — 3 ans comme agent wholesale</p>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h2>Accès privé aux collections — discret, rapide, premium</h2>
-      <p>Nous centralisons pour vous catalogues, tarifs et lookbooks de marques de luxe. Téléchargez les fichiers, ou envoyez-nous une demande personnalisée — nous vous mettons en relation avec les offres off-market et les nouvelles livraisons.</p>
-      <a class="cta" href="#form">Faire une demande</a>
-      <div style="margin-top:20px;color:var(--muted);font-size:13px">Réseaux :
-        <a href="#" id="insta" style="color:var(--muted);margin-left:8px">Instagram</a> ·
-        <a href="#" id="linkedin" style="color:var(--muted);margin-left:8px">LinkedIn</a>
-      </div>
-    </section>
+<main>
+  <section>
+    <h2>Présentation</h2>
+    <p>
+      Fort de 11 années d’expérience dans le milieu du luxe et de la mode, j’ai travaillé avec les
+      meilleurs fournisseurs et maisons. Depuis 3 ans, je mets ce savoir-faire au service de mes clients
+      en tant qu’agent wholesale, en leur offrant un accès privilégié à des collections rares, exclusives et confidentielles.
+    </p>
+  </section>
 
-    <!-- SIDE: Downloads -->
-    <aside class="card" id="downloads">
-      <h3>Téléchargements</h3>
-      <div class="downloads" aria-live="polite">
-        <!-- Remplacez les href ci-dessous par vos liens d'hébergeur (Google Drive/Dropbox/OneDrive/S3) -->
-        <a href="#" id="catalogLink"><strong>Catalogue FW25 — PDF</strong><small>Dernière mise à jour : août 2025</small></a>
-        <a href="#" id="priceLink"><strong>Liste de prix — XLSX</strong><small>Mise à jour mensuelle</small></a>
-        <a href="#" id="lookbookLink"><strong>Lookbook — ZIP images</strong><small>Haute résolution</small></a>
+  <section>
+    <h2>Catalogue</h2>
+    <a href="https://file.io/" target="_blank" class="catalogue-btn">Voir le catalogue</a>
+    <p style="font-size:0.9rem;color:#666;">(Lien mis à jour quotidiennement)</p>
+  </section>
 
-        <div style="margin-top:14px;color:var(--muted);font-size:13px">
-          Hébergement recommandé : Google Drive / Dropbox / S3 (liens partagés).<br>
-          Si tu veux des uploads clients, connecte Formspree ou Uploadcare (voir commentaires).
-        </div>
-      </div>
-    </aside>
+  <section>
+    <h2>Demande de sourcing</h2>
+    <form action="mailto:selezionexyzweb@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+      <input type="email" name="Email" placeholder="Votre email" required>
+      <input type="tel" name="Téléphone" placeholder="Votre téléphone">
 
-    <!-- FORM -->
-    <div class="form-wrap" id="form">
-      <form id="leadForm" action="#" method="POST" enctype="multipart/form-data" novalidate>
-        <!-- NOTE: Remplace action="#" par ton endpoint Formspree / Uploadcare / server -->
-        <h3 style="font-family:'Playfair Display',serif;margin-top:0">Demande client — Accès & sourcing</h3>
+      <label>Collection recherchée :</label>
+      <select name="Collection">
+        <option>FW25</option>
+        <option>SS25</option>
+        <option>Autre</option>
+      </select>
 
-        <div class="row">
-          <div>
-            <label for="name">Nom & Prénom</label>
-            <input id="name" name="name" type="text" required placeholder="Ex : Marie Dupont">
-          </div>
-          <div>
-            <label for="phone">Téléphone</label>
-            <input id="phone" name="phone" type="tel" required placeholder="+33 6 12 34 56 78">
-          </div>
-        </div>
+      <label>Genre :</label>
+      <select name="Genre">
+        <option>Homme</option>
+        <option>Femme</option>
+        <option>Mixte</option>
+      </select>
 
-        <div class="row" style="margin-top:10px">
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="client@boutique.com">
-          </div>
-          <div>
-            <label for="collection">Collection</label>
-            <select id="collection" name="collection">
-              <option>FW25</option>
-              <option>SS25</option>
-              <option>Previous season (N-1)</option>
-              <option>Pre-collection</option>
-              <option>Autre</option>
-            </select>
-          </div>
-        </div>
+      <label>Marques :</label>
+      <input type="text" name="Marques" placeholder="Ex: Gucci, Dior, Balenciaga...">
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
-          <div>
-            <label for="gender">Genre</label>
-            <select id="gender" name="gender">
-              <option>Femme</option>
-              <option>Homme</option>
-              <option>Mixte</option>
-            </select>
-          </div>
-          <div>
-            <label for="category">Catégorie</label>
-            <select id="category" name="category">
-              <option>Prêt-à-porter</option>
-              <option>Chaussures</option>
-              <option>Sacs & Accessoires</option>
-              <option>Mix</option>
-            </select>
-          </div>
-        </div>
+      <label>Catégorie de produits :</label>
+      <input type="text" name="Categorie" placeholder="Ex: Sacs, Prêt-à-porter, Chaussures...">
 
-        <div style="margin-top:10px">
-          <label for="brands">Marques (liste)</label>
-          <textarea id="brands" name="brands" placeholder="Ex : Gucci, Dior, Bottega..."></textarea>
-        </div>
+      <label>Budget :</label>
+      <select name="Budget">
+        <option>0 - 5k</option>
+        <option>5k - 10k</option>
+        <option>10k - 20k</option>
+        <option>20k et +</option>
+      </select>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
-          <div>
-            <label for="budget">Budget estimé</label>
-            <select id="budget" name="budget">
-              <option>0 - 5K€</option>
-              <option>5K€ - 10K€</option>
-              <option>10K€ - 20K€</option>
-              <option>20K€ et +</option>
-            </select>
-          </div>
+      <textarea name="Message" placeholder="Précisez vos besoins" rows="4"></textarea>
 
-          <div>
-            <label for="file">Joindre un fichier (optionnel)</label>
-            <input id="file" name="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.zip">
-            <div class="hint">Taille max recommandée 25MB — pour stockage serveur, utilisez Formspree/Uploadcare/S3</div>
-          </div>
-        </div>
+      <button type="submit">Envoyer la demande</button>
+    </form>
+  </section>
+</main>
 
-        <div class="full" style="margin-top:12px">
-          <label for="message">Message / Précisions</label>
-          <textarea id="message" name="message" placeholder="Informations complémentaires..."></textarea>
-        </div>
-
-        <button class="submit" type="submit">Envoyer la demande</button>
-        <div id="status" style="margin-top:12px;color:var(--muted);font-size:13px"></div>
-      </form>
-
-      <!-- RIGHT SIDE: Contact quick & social -->
-      <aside class="card" id="contact">
-        <h3>Contact rapide</h3>
-        <div style="color:var(--muted);font-size:14px;margin-bottom:12px">
-          Email : <a href="mailto:selezionexyzweb@gmail.com" style="color:var(--accent)">selezionexyzweb@gmail.com</a><br>
-          WhatsApp : <a href="https://wa.me/33783732190" style="color:var(--accent)" target="_blank">+33 7 83 73 21 90</a>
-        </div>
-
-        <div style="margin-top:10px">
-          <a href="#" id="catalogBtn" style="background:transparent;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:block;text-decoration:none;color:var(--accent)">Voir catalogue</a>
-          <a href="#" id="priceBtn" style="background:transparent;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:block;text-decoration:none;color:var(--accent)">Voir tarifs</a>
-        </div>
-
-        <div style="margin-top:14px;color:var(--muted);font-size:13px">Besoin d'un upload client ou d'un stockage sécurisé ? Dis-moi si tu préfères <strong>Formspree</strong> (simple) ou <strong>Uploadcare</strong> (UI & CDN).</div>
-      </aside>
-
-    </div>
-
-    <footer>© Wholesale Agency — Tous droits réservés · <span style="color:var(--muted)">Site statique — Render luxe</span></footer>
+<footer>
+  <p>© 2025 Wholesale Agency</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/agencywholesale" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/selezione-xyz-044855377" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/33783732190" target="_blank">WhatsApp</a>
   </div>
+</footer>
 
-  <script>
-    // =========== Placeholders: replace these URLs with your real links ===========
-    document.getElementById('insta').href = "https://www.instagram.com/agencywholesale?igsh=MXdnb3gzdmZpYmM0cw==";
-    document.getElementById('linkedin').href = "https://www.linkedin.com/in/selezione-xyz-044855377?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
-    document.getElementById('catalogLink').href = "https://example.com/your-catalog.pdf";
-    document.getElementById('priceLink').href = "https://example.com/your-prices.xlsx";
-    document.getElementById('lookbookLink').href = "https://example.com/your-lookbook.zip";
-    document.getElementById('catalogBtn').href = document.getElementById('catalogLink').href;
-    document.getElementById('priceBtn').href = document.getElementById('priceLink').href;
-    // ==========================================================================
-
-    // Simple client-side form handler to show a friendly message and prevent default mailto behaviour.
-    const form = document.getElementById('leadForm');
-    const status = document.getElementById('status');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      status.textContent = "Envoi en cours…";
-
-      // If you haven't set up a server/service, we simply open the mail client as fallback.
-      // To integrate proper submissions:
-      //  - Replace form.action with your Formspree endpoint (https://formspree.io/f/xxxxx)
-      //  - Or implement Fetch POST to your server / Netlify Forms / Uploadcare
-      const action = form.getAttribute('action') || "#";
-
-      if (action === "#" || action.trim() === "") {
-        // fallback: open mail client (mailto)
-        const data = new FormData(form);
-        const subject = encodeURIComponent("Demande Wholesale — " + (data.get('name') || ""));
-        let body = "";
-        for (const [k,v] of data.entries()) {
-          if (k === 'file') continue; // files cannot be serialized in mailto
-          body += `${k}: ${v}\n`;
-        }
-        window.location.href = `mailto:selezionexyzweb@gmail.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-        status.textContent = "Le client va utiliser son client mail pour envoyer la demande. Pour un envoi automatique, connecte un service (Formspree / Uploadcare).";
-        return;
-      }
-
-      // If action is set to an API endpoint, send via fetch
-      try {
-        const formData = new FormData(form);
-        const resp = await fetch(action, { method: 'POST', body: formData });
-        if (resp.ok || resp.status === 0) {
-          status.textContent = "Demande envoyée ✅ Merci — nous revenons vers vous sous 24h.";
-          form.reset();
-        } else {
-          status.textContent = "Erreur d'envoi — vérifie la configuration du service (Formspree / Uploadcare).";
-        }
-      } catch (err) {
-        status.textContent = "Erreur réseau. Vérifie la connexion ou la configuration du service.";
-      }
-    });
-  </script>
 </body>
 </html>
